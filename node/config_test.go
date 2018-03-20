@@ -24,8 +24,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/ubiq/go-ubiq/crypto"
+	"github.com/ubiq/go-ubiq/p2p"
 )
 
 // Tests that datadirs can be successfully created, be them manually configured
@@ -73,15 +73,15 @@ func TestIPCPathResolution(t *testing.T) {
 	}{
 		{"", "", false, ""},
 		{"data", "", false, ""},
-		{"", "geth.ipc", false, filepath.Join(os.TempDir(), "geth.ipc")},
-		{"data", "geth.ipc", false, "data/geth.ipc"},
-		{"data", "./geth.ipc", false, "./geth.ipc"},
-		{"data", "/geth.ipc", false, "/geth.ipc"},
+		{"", "gubiq.ipc", false, filepath.Join(os.TempDir(), "gubiq.ipc")},
+		{"data", "gubiq.ipc", false, "data/gubiq.ipc"},
+		{"data", "./gubiq.ipc", false, "./gubiq.ipc"},
+		{"data", "/gubiq.ipc", false, "/gubiq.ipc"},
 		{"", "", true, ``},
 		{"data", "", true, ``},
-		{"", "geth.ipc", true, `\\.\pipe\geth.ipc`},
-		{"data", "geth.ipc", true, `\\.\pipe\geth.ipc`},
-		{"data", `\\.\pipe\geth.ipc`, true, `\\.\pipe\geth.ipc`},
+		{"", "gubiq.ipc", true, `\\.\pipe\gubiq.ipc`},
+		{"data", "gubiq.ipc", true, `\\.\pipe\gubiq.ipc`},
+		{"data", `\\.\pipe\gubiq.ipc`, true, `\\.\pipe\gubiq.ipc`},
 	}
 	for i, test := range tests {
 		// Only run when platform/test match

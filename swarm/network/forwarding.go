@@ -21,8 +21,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/ubiq/go-ubiq/log"
+	"github.com/ubiq/go-ubiq/swarm/storage"
 )
 
 const requesterCount = 3

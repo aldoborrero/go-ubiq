@@ -22,9 +22,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/log"
 	"github.com/olekukonko/tablewriter"
+	"github.com/ubiq/go-ubiq/core"
+	"github.com/ubiq/go-ubiq/log"
 )
 
 // networkStats verifies the status of network components and generates a protip
@@ -168,8 +168,8 @@ func (p *protips) print(network string) {
 	// If a known genesis block is available, display it and prepend an init command
 	fullinit, lightinit := "", ""
 	if p.genesis != "" {
-		fullinit = fmt.Sprintf("geth --datadir=$HOME/.%s init %s.json && ", network, network)
-		lightinit = fmt.Sprintf("geth --datadir=$HOME/.%s --light init %s.json && ", network, network)
+		fullinit = fmt.Sprintf("gubiq --datadir=$HOME/.%s init %s.json && ", network, network)
+		lightinit = fmt.Sprintf("gubiq --datadir=$HOME/.%s --light init %s.json && ", network, network)
 	}
 	// If an ethstats server is available, add the ethstats flag
 	statsflag := ""

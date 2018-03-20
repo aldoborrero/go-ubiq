@@ -22,10 +22,10 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/ubiq/go-ubiq/common"
+	"github.com/ubiq/go-ubiq/internal/ethapi"
+	"github.com/ubiq/go-ubiq/params"
+	"github.com/ubiq/go-ubiq/rpc"
 )
 
 var maxPrice = big.NewInt(500 * params.Shannon)

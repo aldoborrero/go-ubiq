@@ -24,8 +24,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/log/term"
+	"github.com/ubiq/go-ubiq/log"
+	"github.com/ubiq/go-ubiq/log/term"
 	colorable "github.com/mattn/go-colorable"
 	"gopkg.in/urfave/cli.v1"
 )
