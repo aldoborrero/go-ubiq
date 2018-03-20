@@ -9,7 +9,7 @@ RUN \
   apt-get remove -y golang git make gcc libc-dev && apt autoremove -y && apt-get clean && \
   rm -rf /go-ubiq
 
-EXPOSE 8545
-EXPOSE 30303
+EXPOSE 8588
+EXPOSE 30388
 
 ENTRYPOINT ["/gubiq"]

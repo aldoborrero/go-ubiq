@@ -8,8 +8,8 @@ RUN \
   apk del git go make gcc musl-dev linux-headers          && \
   rm -rf /go-ubiq && rm -rf /var/cache/apk/*
 
-EXPOSE 8545
-EXPOSE 30303
-EXPOSE 30303/udp
+EXPOSE 8588
+EXPOSE 30388
+EXPOSE 30388/udp
 
 ENTRYPOINT ["gubiq"]

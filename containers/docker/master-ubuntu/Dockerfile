@@ -10,6 +10,6 @@ RUN \
   rm -rf /go-ubiq
 
 EXPOSE 8545
-EXPOSE 30303
+EXPOSE 30388
 
 ENTRYPOINT ["/gubiq"]
